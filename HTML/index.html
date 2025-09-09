@@ -3,8 +3,92 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/CSS/index.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/normalize.css" />
     <title>Proyecto Grupo 3</title>
   </head>
-  <body></body>
+  <body>
+    <!-- Script para vincular Bootstrap -->
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <!-- -------------------------------------------Navbar y menu------------------------------------------------>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="/img/logo_RallyKart.png" height="70px" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="/HTML/index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Noticias</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Sucursales
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">OPEN PLAZA LA MARINA</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">REAL PLAZA CHICLAYO</a>
+                </li>
+                <li><a class="dropdown-item" href="#">JOCKEY PLAZA</a></li>
+                <li><a class="dropdown-item" href="#">MALL PLAZA COMAS</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">REAL PLAZA SANTA CLARA</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">TODAS LAS SUCURSALES</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+          </ul>
+          <!-- <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Buscar
+            </button>
+          </form> -->
+        </div>
+      </div>
+    </nav>
+
+    <!-- ----------------------------------------------Carrusel---------------------------------------------- -->
+    <!-- ----------------------------------------------tarjetas---------------------------------------------- -->
+    <!-- ----------------------------------------------Footer---------------------------------------------- -->
+  </body>
 </html>
