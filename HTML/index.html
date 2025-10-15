@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -18,11 +19,12 @@
   <body>
     <!-- Script para vincular Bootstrap -->
     <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/propio.js"></script>
     <!-- -------------------------------------------Navbar y menu------------------------------------------------>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg fixed-top personalizado-navbar">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="/img/logo_RallyKart.png" height="70px" />
+          <img src="/img/logo_RallyKart.png" height="50px" />
         </a>
         <button
           class="navbar-toggler"
@@ -36,13 +38,13 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
             <li class="nav-item">
               <a
                 class="nav-link active"
                 aria-current="page"
                 href="/HTML/index.html"
-                >Home</a
+                >Inicio</a
               >
             </li>
             <li class="nav-item">
@@ -80,6 +82,21 @@
               <a class="nav-link" href="/HTML/contacto.html">Contacto</a>
             </li>
           </ul>
+          <div class="redes sociales d-flex">
+            <a href="https://www.facebook.com/share/1CGWsetWai/" class="icon"
+              ><ion-icon name="logo-facebook"></ion-icon
+            ></a>
+            <a
+              href="https://www.instagram.com/rallykartperu?igsh=MXNxaWxxdjFhOTJqMg=="
+              class="icon"
+              ><ion-icon name="logo-instagram"></ion-icon
+            ></a>
+            <a
+              href="https://chat.whatsapp.com/CeSCdSd8GgxAu16FEH974i"
+              class="icon"
+              ><ion-icon name="logo-whatsapp"></ion-icon
+            ></a>
+          </div>
         </div>
       </div>
     </nav>

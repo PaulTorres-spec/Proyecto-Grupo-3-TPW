@@ -1,0 +1,57 @@
+.redes {
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
+  margin-right: 50px;
+}
+.navbar-nav {
+  margin-left: 20px;
+}
+.navbar-brand {
+  margin-left: 50px;
+}
+.personalizado-navbar {
+  background: transparent;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  height: 68px;
+}
+.personalizado-navbar.scrolled {
+  background: rgba(0, 0, 0, 0.85); /* Puedes cambiar a blanco si prefieres */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+}
+.navbar-collapse.show {
+  background: rgba(0, 0, 0, 0.6); /* Mismo fondo que el navbar */
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+.navbar-collapse.show ~ .redes {
+  padding-left: 50px; /* o margin-left: 10px; según cómo quede mejor */
+}
+.navbar-collapse.show,
+.navbar.custom-navbar {
+  transition: background 0.3s ease;
+}
+.custom-navbar.menu-open {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+}
+.personalizado-navbar .nav-link {
+  color: black; /* Color normal cuando está arriba */
+  transition: color 0.3s ease;
+}
+.personalizado-navbar.scrolled .nav-link {
+  color: white; /* Letras blancas cuando se activa el scroll */
+}
+.nav-link {
+  transition: color 0.2s ease-in-out;
+}
+.nav-link:hover {
+  color: rgb(231, 181, 16) !important;
+}
+.navbar-toggler-icon {
+  transition: filter 0.3s ease;
+}
+.personalizado-navbar.menu-open .navbar-toggler-icon {
+  filter: invert(1); /* blanco */
+}
