@@ -39,6 +39,9 @@
 .personalizado-navbar .nav-link {
   color: black; /* Color normal cuando está arriba */
   transition: color 0.3s ease;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
 }
 .personalizado-navbar.scrolled .nav-link {
   color: white; /* Letras blancas cuando se activa el scroll */
@@ -54,4 +57,129 @@
 }
 .personalizado-navbar.menu-open .navbar-toggler-icon {
   filter: invert(1); /* blanco */
+}
+
+/*CARUSEL*/
+
+.carousel-item img {
+  position: relative;
+  height: 750px;
+}
+
+.blur-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(4px) brightness(70%);
+  transform: scale(1.1);
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.11);
+}
+
+.carousel-caption h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+    height: 400px;
+  }
+  .carousel-caption h2 {
+    font-size: 1.5rem;
+  }
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+}
+
+/*----------------------------- SECTION SOBRE NOSOTROS -------------------------*/
+.fondo-negro {
+  background: #000; /* Fondo negro */
+  color: #fff; /* Texto blanco para que contraste */
+  padding: 50px 0; /* Para que no esté tan apretado */
+}
+
+.porque-rally h2 span {
+  color: #e30613; /* Rojo rally */
+  font-weight: bold;
+}
+
+.porque-rally .subtitulo {
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #555;
+}
+
+.porque-rally ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.porque-rally ul li {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Superposición de imágenes */
+.porque-rally .imagenes {
+  min-height: 350px;
+}
+
+.porque-rally .imagenes img {
+  position: absolute;
+  max-width: 50%;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.porque-rally .imagenes .img1 {
+  top: 0;
+  right: 40px;
+  z-index: 1;
+}
+
+.porque-rally .imagenes .img2 {
+  bottom: 0;
+  left: 40px;
+  z-index: 2;
+}
+
+/* ------------------------- FOTTER ---------------------------------------*/
+/* Estilo general para animaciones en links */
+.nav-link,
+.menu-icon,
+.icon ion-icon {
+  transition: transform 0.2s ease, color 0.2s ease, filter 0.2s ease;
+}
+
+/* Animación al pasar el mouse */
+.nav-link:hover,
+.menu-icon:hover {
+  color: #ffcc00 !important; /* Cambia el color del texto */
+  transform: scale(1.1); /* Lo agranda ligeramente */
+}
+
+/* Para los iconos de redes sociales */
+.icon:hover ion-icon {
+  filter: brightness(1.3); /* Los hace un poco más brillantes */
+  transform: scale(1.2); /* Aumenta un poco el tamaño */
+}
+
+a {
+  text-decoration: none !important;
 }
