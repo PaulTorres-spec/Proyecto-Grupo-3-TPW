@@ -67,4 +67,20 @@
   border-color: #000;
 }
 
+p {
+   animation-duration: 4s;
+   animation-name: animTexto;
+   margin: 20px;
+ }
+ @keyframes animTexto {
+   from {
+     margin-left: 100%;
+     width: 100%;
+   }
+   to {
+     margin-left: 0%;
+     width: 100%;
+   }
+ }
+
 
