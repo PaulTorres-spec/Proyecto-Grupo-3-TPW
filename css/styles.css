@@ -107,11 +107,6 @@
 }
 
 /*----------------------------- SECTION SOBRE NOSOTROS -------------------------*/
-.fondo-negro {
-  background: #000; /* Fondo negro */
-  color: #fff; /* Texto blanco para que contraste */
-  padding: 50px 0; /* Para que no esté tan apretado */
-}
 
 .porque-rally h2 span {
   color: #e30613; /* Rojo rally */
@@ -182,4 +177,30 @@
 
 a {
   text-decoration: none !important;
+}
+.card {
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+
+.card:hover {
+  border-style: solid;
+  border-color: #95a5a6;
+  border-color: #000;
+}
+
+.card-body > p {
+  animation-duration: 4s;
+  animation-name: animTexto;
+  margin: 20px;
+}
+@keyframes animTexto {
+  from {
+    margin-left: 100%;
+    width: 100%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
