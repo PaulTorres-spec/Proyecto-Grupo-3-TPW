@@ -55,3 +55,16 @@
 .personalizado-navbar.menu-open .navbar-toggler-icon {
   filter: invert(1); /* blanco */
 }
+
+.card {
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+
+.card:hover{
+  border-style: solid;
+  border-color: #95A5A6;
+  border-color: #000;
+}
+
+
