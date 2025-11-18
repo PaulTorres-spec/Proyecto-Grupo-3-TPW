@@ -79,10 +79,16 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/HTML/contacto.html">Contacto</a>
+              <a
+                class="nav-link"
+                href="#"
+                data-bs-target="#contacto"
+                data-bs-toggle="modal"
+                >Contacto</a
+              >
             </li>
           </ul>
-          <div class="redes sociales d-flex">
+          <div class="redes sociales d-flex justify-content-evenly py-2">
             <a href="https://www.facebook.com/share/1CGWsetWai/" class="icon"
               ><ion-icon name="logo-facebook"></ion-icon
             ></a>
@@ -187,7 +193,13 @@
                 que gustan de la velocidad y que sueñan con correr algún día de
                 manera profesional.
               </p>
-              <a href="#" class="btn btn-primary">Ver más</a>
+              <a
+                href="#"
+                class="btn btn-primary"
+                data-bs-target="#modalTarjeta1"
+                data-bs-toggle="modal"
+                >Ver más</a
+              >
             </div>
           </div>
         </div>
@@ -203,10 +215,17 @@
               <h5 class="card-title">Diversión segura para toda la familia</h5>
               <p class="card-text">
                 Un circuito de competición ideal para amateurs, profesionales y
-                grandes campeonatos y otro circuito, más pequeño, para la
-                diversión de toda la familia.
+                grandes campeonatos, diseñado para que cada piloto pueda mejorar
+                sus habilidades y disfrutar la emoción de la velocidad en
+                familia.
               </p>
-              <a href="#" class="btn btn-primary">Ver más</a>
+              <a
+                href="#"
+                class="btn btn-primary"
+                data-bs-target="#modalTarjeta2"
+                data-bs-toggle="modal"
+                >Ver más</a
+              >
             </div>
           </div>
         </div>
@@ -225,17 +244,232 @@
                 Más de 10 años de experiencia en diversión, seguridad y
                 competencias. Queremos entregar a nuestros clientes un momento
                 de diversión para toda la familia en nuestras diversas pistas
-                ubicadas en distintos puntos del país. Rallykart es la opción
-                mas segura y económica de vivir una experiencia inolvidable como
-                piloto de carreras.
+                ubicadas en distintos puntos del país.
               </p>
-              <a href="#" class="btn btn-primary">Ver más</a>
+              <a
+                href="#"
+                class="btn btn-primary"
+                data-bs-target="#modalTarjeta3"
+                data-bs-toggle="modal"
+                >Ver más</a
+              >
             </div>
           </div>
         </div>
           
       </div>
        
+    </div>
+
+    <!-------------------------------------------------- Modales  --------------------------------------->
+    <!-- Modal Contacto -->
+    <div class="modal" tabindex="-1" id="contacto">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Completa el formulario</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="formContacto">
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombre"
+                  placeholder="Ingresa tu nombre"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="apellido"
+                  placeholder="Ingresa tu apellido"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="correo" class="form-label">Correo</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="correo"
+                  placeholder="ejemplo@correo.com"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="celular" class="form-label">Celular</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="celular"
+                  placeholder="999 999 999"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="dni" class="form-label">DNI</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="dni"
+                  placeholder="Ingrese su DNI"
+                  required
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button type="submit" form="formContacto" class="btn btn-primary">
+              Enviar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal tarjeta 1 -->
+    <div class="modal" tabindex="-1" id="modalTarjeta1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Pistas desarrolladas por profesionales</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              🌟 Un espacio pensado para que todos disfruten 🌟<br /><br />
+
+              En Rallykart contamos con un circuito principal diseñado para
+              amateurs que quieren mejorar, para pilotos con experiencia que
+              disfrutan la adrenalina de la competencia y para grandes
+              campeonatos donde cada vuelta se siente como una batalla épica en
+              la pista 🏎️🔥.<br /><br />
+
+              🚗💨 Pero eso no es todo…<br />
+              También tenemos un segundo circuito más pequeño, ideal para que
+              toda la familia pueda divertirse sin presiones, sin velocidad
+              extrema y con el ambiente perfecto para que niños, jóvenes y
+              adultos vivan una experiencia segura, alegre y llena de risas
+              😄🏁.<br /><br />
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal tarjeta 2 -->
+    <div class="modal" tabindex="-1" id="modalTarjeta2">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Diversión segura para toda la familia</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              🛡️ Seguridad garantizada<br />
+              Ambas pistas están diseñadas con medidas de seguridad
+              certificadas, control de personal capacitado y vehículos revisados
+              constantemente, garantizando que la experiencia sea emocionante
+              pero siempre protegida 🔒👷‍♂️.<br /><br />
+
+              🎉 Un momento perfecto para compartir<br />
+              Ya sea que busques adrenalina o una actividad tranquila para pasar
+              tiempo en familia, este espacio te ofrece la combinación ideal
+              entre emoción, seguridad y diversión para todos. 🌈✨
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal tarjeta 3 -->
+    <div class="modal" tabindex="-1" id="modalTarjeta3">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Tenemos más de 10 años de experiencia</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              🌟 ¡Más de una década creando momentos épicos! 🌟<br /><br />
+              En Rallykart llevamos más de 10 años dedicados a la diversión, la
+              seguridad y la adrenalina de la competencia sana. Durante todo
+              este tiempo, hemos perfeccionado la experiencia para que cada
+              visitante —desde los más peques hasta los más grandes— pueda
+              sentir la emoción de ser un piloto real 🚗💨✨<br /><br />
+
+              🏁 Vive la aventura en grande<br />
+              Queremos que cada familia disfrute un momento inolvidable. Por
+              eso, contamos con múltiples pistas ubicadas en distintos puntos
+              del país, diseñadas para que vivas una experiencia llena de
+              velocidad, emoción y risas. Ya sea tu primera vez o seas un
+              corredor experto, aquí encuentras el ambiente perfecto para soltar
+              energía y dejar que tu espíritu competitivo tome el volante
+              😄🔥<br /><br />
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- ---------------------------------------- Section 1---------------------------------------------- -->

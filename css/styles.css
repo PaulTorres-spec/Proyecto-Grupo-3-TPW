@@ -1,65 +1,123 @@
-.redes {
-  display: flex;
-  width: 100px;
-  justify-content: space-between;
-  margin-right: 50px;
-}
-.navbar-nav {
-  margin-left: 20px;
-}
-.navbar-brand {
-  margin-left: 50px;
-}
+/* ============================= */
+/* 🌟 NAVBAR RESPONSIVO Y LIMPIO */
+/* ============================= */
+
 .personalizado-navbar {
   background: transparent;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  height: 68px;
-}
-.personalizado-navbar.scrolled {
-  background: rgba(0, 0, 0, 0.85); /* Puedes cambiar a blanco si prefieres */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(5px);
-}
-.navbar-collapse.show {
-  background: rgba(0, 0, 0, 0.6); /* Mismo fondo que el navbar */
-  backdrop-filter: blur(5px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-}
-.navbar-collapse.show ~ .redes {
-  padding-left: 50px; /* o margin-left: 10px; según cómo quede mejor */
-}
-.navbar-collapse.show,
-.navbar.custom-navbar {
-  transition: background 0.3s ease;
-}
-.custom-navbar.menu-open {
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(5px);
-}
-.personalizado-navbar .nav-link {
-  color: black; /* Color normal cuando está arriba */
-  transition: color 0.3s ease;
-  font-weight: 500;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 15px;
-}
-.personalizado-navbar.scrolled .nav-link {
-  color: white; /* Letras blancas cuando se activa el scroll */
-}
-.nav-link {
-  transition: color 0.2s ease-in-out;
-}
-.nav-link:hover {
-  color: rgb(231, 181, 16) !important;
-}
-.navbar-toggler-icon {
-  transition: filter 0.3s ease;
-}
-.personalizado-navbar.menu-open .navbar-toggler-icon {
-  filter: invert(1); /* blanco */
+  padding: 10px 15px;
 }
 
-/*CARUSEL*/
+/* Navbar cuando haces scroll */
+.personalizado-navbar.scrolled {
+  background: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+}
+
+/* Ajuste del logo */
+.navbar-brand img {
+  height: 45px;
+}
+
+.navbar-brand {
+  margin-left: 0 !important;
+}
+
+/* Redes sociales responsivas */
+.redes {
+  display: flex;
+  gap: 10px;
+  width: 150px;
+  margin-right: 0;
+}
+
+/* ----------------------------- LINKS NAVBAR ----------------------------- */
+/* Estado normal (sin scroll) → links NEGROS */
+.personalizado-navbar .nav-link {
+  color: black !important;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 12px;
+  transition: 0.2s;
+}
+
+/* Estado con scroll → links BLANCOS */
+.personalizado-navbar.scrolled .nav-link {
+  color: white !important;
+}
+
+/* Hover sin scroll */
+.personalizado-navbar .nav-link:hover {
+  color: #ffcc00 !important; /* amarillo Rallykart */
+}
+
+/* Hover con scroll */
+.personalizado-navbar.scrolled .nav-link:hover {
+  color: #ffcc00 !important;
+}
+
+/* Menú abierto en móvil */
+.navbar-collapse.show {
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+  padding: 15px 0;
+  border-radius: 10px;
+}
+
+/* Ajusta los elementos dentro del menú colapsado */
+@media (max-width: 991px) {
+  .navbar-nav {
+    margin-left: 0;
+    gap: 10px;
+  }
+
+  .personalizado-navbar .nav-link {
+    background: rgba(255, 255, 255, 0.15);
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    color: white !important; /* links blancos en móvil */
+  }
+
+  .dropdown-menu {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    width: 90%;
+    margin: auto;
+  }
+
+  .dropdown-item {
+    color: white;
+  }
+
+  .dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  /* Redes sociales debajo del menú */
+  .redes {
+    margin-top: 15px;
+    justify-content: center;
+  }
+}
+
+/* Ícono hamburguesa blanco */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  filter: invert(0);
+}
+
+/* Al abrir menú */
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+/*-----------------------------------------CARUSEL-------------------------------------*/
 
 .carousel-item img {
   position: relative;
