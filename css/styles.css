@@ -212,6 +212,96 @@
   z-index: 2;
 }
 
+/* ------------------------- tarjetas tipo carrusel ---------------------------------------*/
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+/* Contenedor tipo slider */
+.card-slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+
+  /* Scrollbar fino */
+  scrollbar-width: thin;
+}
+
+.card-slider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.card-slider::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 4px;
+}
+
+.card-slider::-webkit-scrollbar-track {
+  background: #ddd;
+}
+
+/* Tamaño de cada tarjeta: 3 visibles */
+.card-item {
+  min-width: calc(33.33% - 20px);
+}
+
+/* Tarjeta con altura fija */
+.card-fija {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-fija img {
+  height: 120px; /* mitad de la tarjeta para que no desborde */
+  object-fit: cover;
+}
+
+.card-fija .card-body {
+  overflow: hidden;
+}
+
+/* ===================== */
+/* Flechas del Slider    */
+/* ===================== */
+
+.slider-container {
+  position: relative;
+}
+
+/* Botones izquierda/derecha */
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.slide-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Flecha izquierda */
+.left-btn {
+  left: 0;
+}
+
+/* Flecha derecha */
+.right-btn {
+  right: 0;
+}
 /* ------------------------- FOTTER ---------------------------------------*/
 /* Pie */
 .pie-pagina {
