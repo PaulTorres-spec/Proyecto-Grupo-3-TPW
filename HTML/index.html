@@ -276,11 +276,12 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form id="formContacto">
+            <form action="guardar.php" method="POST" id="formContacto">
               <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
                 <input
                   type="text"
+                  name="nombre"
                   class="form-control"
                   id="nombre"
                   placeholder="Ingresa tu nombre"
@@ -291,6 +292,7 @@
                 <label for="apellido" class="form-label">Apellido</label>
                 <input
                   type="text"
+                  name="apellido"
                   class="form-control"
                   id="apellido"
                   placeholder="Ingresa tu apellido"
@@ -301,6 +303,7 @@
                 <label for="correo" class="form-label">Correo</label>
                 <input
                   type="email"
+                  name"correo"
                   class="form-control"
                   id="correo"
                   placeholder="ejemplo@correo.com"
@@ -311,6 +314,7 @@
                 <label for="celular" class="form-label">Celular</label>
                 <input
                   type="tel"
+                  name="celular"
                   class="form-control"
                   id="celular"
                   placeholder="999 999 999"
@@ -321,6 +325,7 @@
                 <label for="dni" class="form-label">DNI</label>
                 <input
                   type="text"
+                  name="DNI"
                   class="form-control"
                   id="dni"
                   placeholder="Ingrese su DNI"
