@@ -213,52 +213,137 @@
 }
 
 /* ------------------------- FOTTER ---------------------------------------*/
-/* Estilo general para animaciones en links */
-.nav-link,
-.menu-icon,
-.icon ion-icon {
-  transition: transform 0.2s ease, color 0.2s ease, filter 0.2s ease;
+/* Pie */
+.pie-pagina {
+  width: 100%;
+  background-color: #ff0000;
+  color: #ffffff;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Animación al pasar el mouse */
-.nav-link:hover,
-.menu-icon:hover {
-  color: #ffcc00 !important; /* Cambia el color del texto */
-  transform: scale(1.1); /* Lo agranda ligeramente */
+.pie-pagina .grupo-1 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
 }
 
-/* Para los iconos de redes sociales */
-.icon:hover ion-icon {
-  filter: brightness(1.3); /* Los hace un poco más brillantes */
-  transform: scale(1.2); /* Aumenta un poco el tamaño */
+/* Animación general de textos */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeMove 1.2s ease forwards;
 }
 
-a {
-  text-decoration: none !important;
-}
-.card {
-  -webkit-transition: 1s linear;
-  transition: 1s linear;
-}
-
-.card:hover {
-  border-style: solid;
-  border-color: #95a5a6;
-  border-color: #000;
-}
-
-.card-body > p {
-  animation-duration: 4s;
-  animation-name: animTexto;
-  margin: 20px;
-}
-@keyframes animTexto {
-  from {
-    margin-left: 100%;
-    width: 100%;
-  }
+@keyframes fadeMove {
   to {
-    margin-left: 0%;
-    width: 100%;
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+/* Animación especial de imagen */
+.img-anim {
+  opacity: 0;
+  transform: scale(0.8) rotate(-3deg);
+  animation: imgEntrance 1.2s ease-out forwards;
+}
+
+@keyframes imgEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) rotate(-5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Evitar click y cursor mano */
+.no-click {
+  pointer-events: none;
+  cursor: default;
+}
+
+/* Imagen */
+.pie-pagina .grupo-1 .box figure {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img {
+  width: 250px;
+  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.4));
+}
+
+/* Textos */
+.pie-pagina .grupo-1 .box h2 {
+  margin-bottom: 25px;
+  font-size: 20px;
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+.pie-pagina .grupo-1 .box p {
+  margin-bottom: 10px;
+}
+
+/* Redes sociales */
+.pie-pagina .grupo-1 .red-social a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #ffffff;
+  margin-right: 10px;
+  background-color: #b30000;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover {
+  transform: scale(1.2) translateY(-4px);
+  background-color: #fff;
+  color: #ff0000;
+}
+
+/* Iconos contacto */
+.pie-pagina .grupo-1 .box p i {
+  margin-right: 8px;
+}
+
+/* Fondo inferior */
+.pie-pagina .grupo-2 {
+  background-color: #000000;
+  padding: 15px 10px;
+  text-align: center;
+}
+
+.pie-pagina .grupo-2 small {
+  font-size: 15px;
+}
+
+/* Responsive */
+@media screen and (max-width: 800px) {
+  .pie-pagina .grupo-1 {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+  }
+}
+
+footer .red-social ion-icon {
+  font-size: 32px; /* prueba 28px, 32px, 40px según lo grande que los quieras */
+  padding-top: 6px;
 }
